@@ -22,10 +22,7 @@ align-items: center;
 img{
 width: 100px;
 }
-.newreply{
-    text-align: left;
-    margin-left: 170px;
-}
+
 
 
 </style>
@@ -149,15 +146,16 @@ foreach($text as $faq){
 
 
 
-</div>
+
 
 <?php
 
 $newReply=str_replace('.','<p>',$faq['reply']);
 ?>
-<div class="newreply">
+
  <p  ><?= $newReply?></p>   
-</div>
+ </div>
+
 
 <?php
 }
