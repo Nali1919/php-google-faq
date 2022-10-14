@@ -4,29 +4,59 @@
     max-width: 1000px;
     margin: 50px auto;
 }
+a {
+    text-decoration: none;
+    padding:0px 10px;
+    font-size:20px;
+    color: #3367d6;
+}
+a:hover {
+    border-bottom: 5px solid #3367d6;
+    padding-bottom: 5px;
+
+}
+.flex{
+display: flex;
+align-items: center;
+}
+img{
+width: 100px;
+}
+.newreply{
+    text-align: left;
+    margin-left: 170px;
+}
+
+
 </style>
+
+<div class="flex">
+  <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="logo-google"> 
+  <h5>Privacy e Termini</h5>
+</div>
 
 <?php
 
 $navbar=[
-    [
+    
       'introduzione',
       'Norme sulla privacy',
       'Termini di servizio',
       'Tecnologie',
       'Domande Frequneti'
-    ]
+
 
 ];
 
+
    foreach($navbar as $linkNav){
     ?>
-   <div>
+    
+      
     <a href="#"><?= $linkNav ?></a>   
-   </div>
-
 
     <?php
+    
     } 
 
 
@@ -110,13 +140,23 @@ $text=[
 
 foreach($text as $faq){
 
-
 ?>
 
 <div class="center">
 <h2><?= $faq['question']?></h2>
-<p><?= $faq['reply']?></p>
 
+
+
+
+
+</div>
+
+<?php
+
+$newReply=str_replace('.','<p>',$faq['reply']);
+?>
+<div class="newreply">
+ <p  ><?= $newReply?></p>   
 </div>
 
 <?php
