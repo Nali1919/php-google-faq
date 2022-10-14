@@ -7,7 +7,7 @@
 a {
     text-decoration: none;
     padding:0px 10px;
-    font-size:20px;
+    font-size:15px;
     color: #3367d6;
 }
 a:hover {
